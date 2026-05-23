@@ -1,2 +1,63 @@
 @import "tailwindcss";
 @custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-paper: #f4f1eb;
+  --color-surface: #ebe6dd;
+  --color-rule: #cbc5bb;
+  --color-ink-deep: #111111;
+  --color-ink: #30333a;
+  --color-ink-mute: #737780;
+
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  :root {
+    color-scheme: light;
+    background: var(--color-paper);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    min-width: 320px;
+    background: var(--color-paper);
+    color: var(--color-ink-deep);
+    font-family: var(--font-body);
+    text-rendering: geometricPrecision;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background: rgba(23, 19, 15, 0.14);
+    color: var(--color-ink-deep);
+  }
+
+  a,
+  button,
+  input,
+  textarea {
+    outline-color: var(--color-ink-deep);
+  }
+}
+
+@layer components {
+  .hairline {
+    border-color: rgba(17, 17, 17, 0.18);
+  }
+
+  .label-eyebrow {
+    font-family: var(--font-display);
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.28em;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: var(--color-ink-mute);
+  }
+}

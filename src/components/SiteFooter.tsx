@@ -2,24 +2,22 @@ import Link from "next/link";
 
 export function SiteFooter() {
   return (
-    <footer className="mt-32 border-t hairline">
-      <div className="mx-auto max-w-[1400px] px-6 py-16 lg:px-12">
-        <div className="grid gap-12 md:grid-cols-12">
+    <footer className="border-t hairline">
+      <div className="mx-auto max-w-[1328px] px-6 py-16 lg:px-12 2xl:px-0">
+        <div className="grid gap-x-12 gap-y-20 md:grid-cols-12">
           <div className="md:col-span-5">
-            <Link href="/" className="flex items-baseline gap-2 font-display">
-              <span className="text-2xl tracking-tight text-ink-deep">URG</span>
-              <span className="h-1 w-1 rounded-full bg-ink-deep" />
-              <span className="text-2xl tracking-tight text-ink-deep">IS</span>
+            <Link href="/" className="font-display text-2xl font-medium tracking-tight text-ink-deep">
+              <span>URG . IS</span>
             </Link>
-            <p className="mt-6 max-w-md font-body text-sm leading-relaxed text-ink-mute">
+            <p className="mt-7 max-w-md font-body text-[15px] leading-relaxed text-ink-mute">
               A conceptual framework for relationship-awareness and contextual
               understanding across evolving environments.
             </p>
           </div>
 
           <div className="md:col-span-4 md:col-start-7">
-            <div className="label-eyebrow mb-4">Navigate</div>
-            <ul className="space-y-2 font-body text-sm">
+            <div className="label-eyebrow mb-5">Navigate</div>
+            <ul className="space-y-2.5 font-body text-[15px]">
               {[
                 ["/concept", "Concept"],
                 ["/problem", "Problem space"],
@@ -36,10 +34,10 @@ export function SiteFooter() {
             </ul>
           </div>
 
-          <div className="md:col-span-3">
-            <div className="label-eyebrow mb-4">Inquire</div>
+          <div className="md:col-span-5">
+            <div className="label-eyebrow mb-6">Inquire</div>
             <Link href="/contact"
-              className="font-body text-sm text-ink underline-offset-4 hover:underline"
+              className="font-body text-[15px] text-ink-deep underline-offset-4 hover:underline"
             >
               Partnership & collaboration →
             </Link>

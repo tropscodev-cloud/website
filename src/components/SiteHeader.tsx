@@ -17,15 +17,13 @@ export function SiteHeader() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-40 border-b hairline bg-paper/80 backdrop-blur-md">
-      <div className="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-5 lg:px-12">
-        <Link href="/" className="flex items-baseline gap-2 font-display">
-          <span className="text-xl tracking-tight text-ink-deep">URG</span>
-          <span className="h-1 w-1 rounded-full bg-ink-deep" />
-          <span className="text-xl tracking-tight text-ink-deep">IS</span>
+    <header className="border-b hairline bg-paper">
+      <div className="mx-auto flex h-[69px] max-w-[1328px] items-center justify-between px-6 lg:px-12 2xl:px-0">
+        <Link href="/" className="font-display text-xl font-medium tracking-tight text-ink-deep">
+          <span>URG . IS</span>
         </Link>
 
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav className="hidden items-center gap-9 md:flex">
           {NAV.map((item) => {
             const isActive = pathname === item.href;
             return (
@@ -54,7 +52,7 @@ export function SiteHeader() {
 
       {open && (
         <div className="border-t hairline bg-paper md:hidden">
-          <nav className="mx-auto flex max-w-[1400px] flex-col gap-4 px-6 py-6">
+          <nav className="mx-auto flex max-w-[1328px] flex-col gap-4 px-6 py-6">
             {NAV.map((item) => {
               const isActive = pathname === item.href;
               return (

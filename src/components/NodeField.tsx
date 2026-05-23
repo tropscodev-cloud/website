@@ -61,8 +61,8 @@ export function NodeField({ className, density = 50 }: NodeFieldProps) {
         height / 2,
         Math.max(width, height) * 0.75
       );
-      grad.addColorStop(0, "rgba(13,13,13,0)");
-      grad.addColorStop(1, "rgba(13,13,13,0.04)");
+      grad.addColorStop(0, "rgba(17,17,17,0)");
+      grad.addColorStop(1, "rgba(17,17,17,0.025)");
       ctx.fillStyle = grad;
       ctx.fillRect(0, 0, width, height);
 
@@ -77,8 +77,8 @@ export function NodeField({ className, density = 50 }: NodeFieldProps) {
           const dy = a.y - b.y;
           const dist = Math.hypot(dx, dy);
           if (dist < threshold) {
-            const alpha = (1 - dist / threshold) * 0.35;
-            ctx.strokeStyle = `rgba(13,13,13,${alpha.toFixed(3)})`;
+            const alpha = (1 - dist / threshold) * 0.18;
+            ctx.strokeStyle = `rgba(17,17,17,${alpha.toFixed(3)})`;
             ctx.lineWidth = 0.5;
             ctx.beginPath();
             ctx.moveTo(a.x, a.y);
@@ -89,10 +89,10 @@ export function NodeField({ className, density = 50 }: NodeFieldProps) {
       }
 
       // Nodes
-      ctx.fillStyle = "rgba(13,13,13,0.85)";
+      ctx.fillStyle = "rgba(17,17,17,0.78)";
       for (const n of nodes) {
         ctx.beginPath();
-        ctx.arc(n.x, n.y, 1.4, 0, Math.PI * 2);
+        ctx.arc(n.x, n.y, 1.25, 0, Math.PI * 2);
         ctx.fill();
       }
     };
